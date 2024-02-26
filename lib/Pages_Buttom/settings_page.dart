@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practise_flutter/Themes/theme_provider.dart';
+import 'package:practise_flutter/widgets/app_bar.dart';
 import 'package:provider/provider.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -15,15 +16,12 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
-        title: const Text(
-          "Settings",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-        ),
-        centerTitle: true,
+      appBar: const CustomAppBar(
+        size: 38,
+        leading: Text(""),
+        title:'Settings',
       ),
-      body: Column(children: [
+      body:Column(children: [
         Container(
             alignment: Alignment.topLeft,
             child: SwitchListTile(

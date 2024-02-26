@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practise_flutter/Themes/my_theme.dart';
 import 'package:practise_flutter/widgets/app_bar.dart';
 import 'package:practise_flutter/widgets/grid_suduko.dart';
 
@@ -16,7 +17,7 @@ class EasyScreen extends StatelessWidget {
   ];
 
   void addPredefinedValues() {
-    // Replace this logic with your own to generate predefined values
+
   }
 
   EasyScreen({Key? key}) : super(key: key);
@@ -25,10 +26,19 @@ class EasyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: const CustomAppBar(
-        title: "Easy Level",
+      appBar:const  CustomAppBar(title: "Easy Level",
+          size: 32,
+
       ),
-      body: GridSudoku(initialValues: numberList),
+
+      body:
+      Stack
+        (
+        children:[
+          const SizedBox(height: 180,width: 30),
+        GridSudoku(initialValues: numberList),
+      ]
+      )
     );
   }
 }

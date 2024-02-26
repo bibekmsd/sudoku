@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:practise_flutter/Pages_Buttom/settings_page.dart';
 import 'package:practise_flutter/HomePage/homepage.dart';
 import 'package:practise_flutter/Pages_Buttom/statistics_game.dart';
+import 'package:practise_flutter/widgets/app_bar.dart';
 
 class NavigationBarBanako extends StatefulWidget {
   const NavigationBarBanako({Key? key}) : super(key: key);
@@ -35,6 +36,7 @@ class NavigationBarBanakoState extends State<NavigationBarBanako> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: PageView(
         controller: _pageController,
         children: _children,
@@ -49,7 +51,7 @@ class NavigationBarBanakoState extends State<NavigationBarBanako> {
         iconSize: 30,
         selectedFontSize: 20,
         unselectedFontSize: 15,
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: const Color.fromRGBO(155, 190, 255, 1),
         unselectedItemColor: Colors.white,
         selectedItemColor: Colors.black,
         currentIndex: currentIndex,

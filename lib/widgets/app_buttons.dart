@@ -1,56 +1,49 @@
-// ignore_for_file: sort_child_properties_last
-
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class AppButtons extends StatelessWidget {
-  //Add all the items needed in a button
   final Color txtColor;
   final Color bgColor;
-  // final Color boderColor;
   final String text;
-  IconData? icon;
-  double sizeHeight;
-  double sizeWidth;
-  double fontSize;
-  // double boderWidth;
+  final IconData? icon;
+  final double sizeHeight;
+  final double sizeWidth;
+  final double fontSize;
+  final VoidCallback onPressedCallback;
+
   AppButtons({
-    super.key,
+    Key? key,
     required this.txtColor,
     required this.bgColor,
-    // required this.boderColor,
     required this.text,
     this.icon,
     required this.sizeWidth,
     required this.sizeHeight,
     required this.fontSize,
-    // required this.boderWidth,
-  });
+    required this.onPressedCallback,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        width: sizeWidth,
-        height: sizeHeight,
-        child: Center(
-          child: Row(
-            children: [
-              Text(
-                text,
-                style: TextStyle(
-                  color: txtColor,
-                  fontSize: fontSize,
-                ),
+    return ElevatedButton(
+      onPressed: onPressedCallback,
+      style: ElevatedButton.styleFrom(
+        backgroundColor: bgColor,
+      ),
+      child: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center, // Center text and icon
+          children: [
+            Text(
+              text,
+              style: TextStyle(
+                color: txtColor,
+                fontSize: fontSize,
               ),
-              const SizedBox(width: 10, height: 10),
-              Icon(icon),
-            ],
-          ),
-        ),
-        decoration: BoxDecoration(
-          color: bgColor,
-          borderRadius: BorderRadius.circular(8),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(width: 10), // Adjust the spacing between text and icon
+            if (icon != null) Icon(icon),
+          ],
         ),
       ),
     );

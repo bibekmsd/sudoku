@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:practise_flutter/widgets/app_bar.dart';
 
 class StatisticsPage extends StatefulWidget {
   // const StatisticsPage({super.key});
@@ -10,17 +13,12 @@ class StatisticsPage extends StatefulWidget {
 class _StatisticsPageState extends State<StatisticsPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-      backgroundColor: Colors.blueGrey,
-      title: const Text(
-        "Statistics",
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 30,
-        ),
+    return const Scaffold(
+       appBar: CustomAppBar(
+         size: 38,
+         title: 'Statistics',
+         leading: Text(""),
       ),
-      centerTitle: true,
-    ));
+    );
   }
 }
