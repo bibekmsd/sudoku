@@ -50,7 +50,7 @@ class NumberButtonPad extends StatelessWidget {
                 // Backspace button
                 return ElevatedButton(
                   onPressed: () {
-                    onNumberPressed(-1); // Use a special value (e.g., -1) to represent backspace
+                    onNumberPressed(0); // Use a special value (e.g., -1) to represent backspace
                   },
                   style: ButtonStyle(
                     alignment: Alignment.center,
@@ -61,7 +61,7 @@ class NumberButtonPad extends StatelessWidget {
                       ),
                     ),
                   ),
-                  child: const Icon(
+                  child: const  Icon(
                     Icons.backspace,
                     color: Colors.white,
                     size: 20,

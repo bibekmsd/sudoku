@@ -5,14 +5,14 @@ import 'package:practise_flutter/widgets/app_buttons.dart';
 import 'package:practise_flutter/widgets/grid_suduko.dart';
 import 'package:practise_flutter/widgets/number_button.dart';
 
-class SukokuSolver extends StatefulWidget {
-  const SukokuSolver({Key? key}) : super(key: key);
+class SudokuSolver extends StatefulWidget {
+  const SudokuSolver({Key? key}) : super(key: key);
 
   @override
-  State<SukokuSolver> createState() => _SukokuSolverState();
+  State<SudokuSolver> createState() => _SudokuSolverState();
 }
 
-class _SukokuSolverState extends State<SukokuSolver> {
+class _SudokuSolverState extends State<SudokuSolver> {
   final List<List<int>> numberList = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -52,13 +52,13 @@ class _SukokuSolverState extends State<SukokuSolver> {
                 child: AppButtons(
                   bgColor: const Color.fromRGBO(155, 190, 255, 1),
                   fontSize: 32,
-                 sizeWidth: 40,
-                    sizeHeight: 32,
+                  sizeWidth: 40,
+                  sizeHeight: 32,
                   text: "Solve !",
                   onPressedCallback:call,
                   txtColor: Theme.of(context).brightness == Brightness.light
-                    ? Colors.black // Light mode text color
-                    : Colors.white, // Dark mode text color
+                      ? Colors.black // Light mode text color
+                      : Colors.white, // Dark mode text color
 
                 ),
 

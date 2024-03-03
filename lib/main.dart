@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practise_flutter/GameLevel/sukoku_solver.dart';
+import 'package:practise_flutter/GameLevel/sudoku_solver.dart';
 import 'package:practise_flutter/NavigationBar/navigation_bar.dart';
 import 'package:practise_flutter/Themes/theme_provider.dart';
 import 'package:practise_flutter/widgets/grid_suduko.dart';
