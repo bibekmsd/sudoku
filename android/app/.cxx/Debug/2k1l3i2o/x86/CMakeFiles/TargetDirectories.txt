@@ -1,0 +1,2 @@
+/Users/gautam77/All files/All flutter/sudoku/android/app/.cxx/Debug/2k1l3i2o/x86/CMakeFiles/edit_cache.dir
+/Users/gautam77/All files/All flutter/sudoku/android/app/.cxx/Debug/2k1l3i2o/x86/CMakeFiles/rebuild_cache.dir
